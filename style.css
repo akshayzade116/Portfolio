@@ -1,0 +1,210 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  color: white;
+  overflow-x: hidden;
+}
+
+/* Background */
+body::before {
+  content: "";
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: url("https://images.unsplash.com/photo-1506744038136-46273834b3fb") center/cover;
+  filter: blur(10px) brightness(0.3);
+  z-index: -2;
+}
+
+/* Particles */
+#particles-js {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  pointer-events: none;
+}
+
+/* Header */
+header {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 50px;
+  background: rgba(0,0,0,0.5);
+  backdrop-filter: blur(10px);
+  position: relative;
+  z-index: 2;
+}
+
+nav a {
+  margin: 0 15px;
+  color: cyan;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+nav a:hover {
+  text-shadow: 0 0 10px cyan;
+}
+
+/* Hero */
+.hero {
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  z-index: 2;
+}
+
+.hero h2 {
+  font-size: 40px;
+  color: cyan;
+  text-shadow: 0 0 15px cyan;
+}
+
+/* Sections */
+.section {
+  padding: 80px 20px;
+  text-align: center;
+  position: relative;
+  z-index: 2;
+}
+
+/* Glass (pink border only) */
+.glass {
+  margin: 40px auto;
+  width: 80%;
+  padding: 30px;
+  border-radius: 15px;
+  background: rgba(0,255,255,0.05);
+  backdrop-filter: blur(15px);
+  border: 1.5px solid rgba(255,105,180,0.6);
+  box-shadow: 0 0 15px rgba(0,255,255,0.2);
+  transition: 0.4s;
+}
+
+.glass:hover {
+  transform: scale(1.02);
+  box-shadow: 0 0 25px cyan, 0 0 10px pink;
+}
+
+/* 💖 HEADING EFFECT */
+.section h2 {
+  color: cyan;
+  margin-bottom: 20px;
+  position: relative;
+  text-shadow:
+    0 0 5px #ff69b4,
+    0 0 10px #ff69b4,
+    0 0 15px rgba(255,105,180,0.6),
+    0 0 5px cyan;
+  transition: 0.3s;
+}
+
+.section h2:hover {
+  text-shadow:
+    0 0 10px #ff69b4,
+    0 0 20px #ff69b4,
+    0 0 30px #ff1493,
+    0 0 10px cyan;
+}
+
+/* underline */
+.section h2::after {
+  content: "";
+  width: 0%;
+  height: 3px;
+  background: linear-gradient(90deg, cyan, #ff69b4);
+  display: block;
+  margin: auto;
+  transition: 0.4s;
+}
+
+.section:hover h2::after {
+  width: 70%;
+}
+
+/* Skills */
+.skill {
+  margin: 20px 0;
+  text-align: left;
+}
+
+.skill span {
+  color: cyan;
+}
+
+.bar {
+  height: 10px;
+  background: rgba(255,255,255,0.2);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.bar div {
+  height: 100%;
+  background: linear-gradient(90deg, cyan, pink);
+  border-radius: 10px;
+}
+
+/* Project */
+.card {
+  padding: 20px;
+  background: rgba(0,255,255,0.08);
+  border-radius: 10px;
+  margin-top: 20px;
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 0 25px cyan;
+}
+
+/* Form */
+form {
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  margin: auto;
+  position: relative;
+  z-index: 3;
+}
+
+input, textarea {
+  margin: 10px 0;
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid rgba(255,255,255,0.2);
+  background: rgba(0,0,0,0.5);
+  color: white;
+  outline: none;
+}
+
+input:focus, textarea:focus {
+  border-color: cyan;
+  box-shadow: 0 0 10px cyan;
+}
+
+/* Button */
+button {
+  padding: 12px;
+  background: linear-gradient(90deg, cyan, pink);
+  border: none;
+  cursor: pointer;
+  color: white;
+  border-radius: 8px;
+  transition: 0.3s;
+}
+
+button:hover {
+  box-shadow: 0 0 15px cyan;
+  transform: scale(1.05);
+}
